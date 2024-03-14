@@ -7,4 +7,48 @@ editor_options:
   chunk_output_type: console
 ---
 
-Describe your project.
+## Hello there thanks for stopping by my website. How about you learn a little about me!
+
+
+My name is Jessica Dardignac and I am from a small town in New Jersey. I was raised by my parents along side my two older brother and my lovely dog Benji! I got my Bachlours in Biology at Fairleigh Dickenson University. Now I am pursuing my Masters in Science at Villanova Univeristy. 
+
+
+```{r echo=FALSE}
+# Load required packages
+library(grid)
+
+# Set the working directory to where your image is located
+setwd("C://Users//Jmons//OneDrive//Documents//R-Class work//Photos")
+
+library(jpeg)
+
+# Read the image file
+img <- readJPEG("Photo_of_benji.jpg") # You can also use readJPEG() for JPEG files or readTIFF() for TIFF files
+
+# Display the image
+grid::grid.raster(img)
+
+```
+```{r echo=FALSE}
+library(grid)
+
+# Set the working directory to where your image is located
+setwd("C://Users//Jmons//OneDrive//Documents//R-Class work//Photos")
+
+library(jpeg)
+# Read the image file
+img <- readJPEG("Fam_grad_pic.jpg") # You can also use readJPEG() for JPEG files or readTIFF() for TIFF files
+
+grid::grid.raster(img)
+```
+
+
+## Some fun facts about me
+
+I geek out on video games and anime
+
+I live with the curse of if I see someone do it online I think its easy and that I could do (maybe better)
+
+My favorite time of year is fall
+
+Im not a very good swimmer

@@ -5,6 +5,8 @@ navbar:
   left:
   - text: Home
     href: index.html
+  - text: First Analysis
+    href: first_analysis_trial.html
   - text: About
     href: about.html
   - text: License
@@ -17,5 +19,5 @@ output:
   workflowr::wflow_html:
     toc: yes
     toc_float: yes
-    theme: cosmo
+    theme: journal
     highlight: textmate
