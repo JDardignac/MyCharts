@@ -12,6 +12,7 @@ editor_options:
 
 My name is Jessica Dardignac and I am from a small town in New Jersey. I was raised by my parents along side my two older brother and my lovely dog Benji! I got my Bachlours in Biology at Fairleigh Dickenson University. Now I am pursuing my Masters in Science at Villanova Univeristy. 
 
+![Historical ecosystems map.](images/bps.jpg){style="float:right; margin-left: 5%; fig-align:right; width:25%;" fig-alt="\"Historical ecosystems map of a large region in the western United States."}
 
 ```{r echo=FALSE}
 # Load required packages
@@ -40,6 +41,9 @@ library(jpeg)
 img <- readJPEG("Fam_grad_pic.jpg") # You can also use readJPEG() for JPEG files or readTIFF() for TIFF files
 
 grid::grid.raster(img)
+```
+```{r}
+
 ```
 
 
