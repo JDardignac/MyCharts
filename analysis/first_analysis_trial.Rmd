@@ -8,15 +8,10 @@ date: "2024-02-22"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Click on this [link](first_analysis_trial.html) to see my results.
 
-Adding an Image
-> Load required packages:
-library(grid)
-library(jpeg)
+This is how I felt completing this website! Anyways lets get into the results shall we
 
-
-```{r echo=FALSE}
+```{r echo=FALSE, warning=FALSE, results='hide'}
 # Load required packages
 library(grid)
 
@@ -35,3 +30,374 @@ grid::grid.raster(img)
 
 
 
+
+# The Top 20 
+
+<span style="color:rgb(255, 20, 147);"> There are so many Species of the genus Candida so just for fun, before we look at the truly pathogenic ones lets see how about 20 of them reacted in growing in different sugars 
+
+<span style="color:rgb(255, 20, 147);"> **Here is a heat map looking at how much of the sugars were used based on each species**
+
+
+```{r echo=FALSE, warning=FALSE, results='hide'}
+
+setwd("C:/Users/Jmons/OneDrive/Documents/R-Class work/MyCharts")
+getwd()
+
+library(readr)
+Shorted_C_NormGR_OnlySugars <- read.csv("C:/Users/Jmons/OneDrive/Documents/R-Class work/MyCharts/data/Shorted_C_NormGR_OnlySugars.csv")
+
+View(Shorted_C_NormGR_OnlySugars)
+
+library(dplyr)
+Candida_data <- Shorted_C_NormGR_OnlySugars %>% filter(Genus == "Candida")
+
+# View the filtered data
+View(Candida_data)
+# or print the first few rows in the console
+head(Candida_data)
+
+#making violent plot
+
+# Load necessary libraries
+library(readr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+
+# Load and prepare the data
+Shorted_C_NormGR_OnlySugars <- read.csv("C:/Users/Jmons/OneDrive/Documents/R-Class work/MyCharts/data/Shorted_C_NormGR_OnlySugars.csv")
+Candida_data <- Shorted_C_NormGR_OnlySugars %>% filter(Genus == "Candida")
+
+Candida_long <- Candida_data %>%
+  pivot_longer(
+    cols = -c(PU, Species, Genus, NRRL, CBS, Other, Hittinger), # Adapt these column names as needed
+    names_to = "Sugar",
+    values_to = "Measurement"
+  )
+
+
+
+
+
+```
+
+
+```{r echo=FALSE, warning=FALSE, results='hide'}
+##########Table
+# Load necessary libraries
+library(readr)
+
+# Read the data
+Shorted_C_NormGR_OnlySugars <- read.csv("C:/Users/Jmons/OneDrive/Documents/R-Class work/MyCharts/data/Shorted_C_NormGR_OnlySugars.csv")
+
+# Print all column names to check their exact spelling
+print(names(Shorted_C_NormGR_OnlySugars))
+
+# Assuming 'library(dplyr)' has already been loaded
+# Filter data for the genus "Candida"
+Candida_data <- Shorted_C_NormGR_OnlySugars %>% 
+  filter(Genus == "Candida")
+
+# Adjust this select statement to match the confirmed column names
+Candida_data_selected <- Candida_data %>%
+  select(Species, everything())  # This line is just a placeholder; adjust based on actual column names
+# Print the first few rows to confirm the structure
+head(Candida_data_selected)
+
+# Optionally, use View to inspect the data frame in a more interactive way
+View(Candida_data_selected)
+
+# Assuming you've already loaded the necessary libraries and have the Candida_data_selected dataframe ready
+library(dplyr)
+
+# Exclude columns 2 through 7 from the dataframe
+Candida_data_selected <- Candida_data_selected %>%
+  select(-c(2:7))
+
+# Print the first few rows to confirm that the columns have been excluded
+head(Candida_data_selected)
+
+# Optionally, use View to inspect the data frame in a more interactive way
+View(Candida_data_selected)
+
+
+
+```
+
+
+```{r echo=FALSE, fig.height=5, fig.width=8, warning=FALSE, results='hide'}
+# Load necessary libraries
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+
+# Assuming Candida_data_selected is already loaded
+# Identify the top 20 unique species
+top_species <- unique(Candida_data_selected$Species)[1:20]
+
+# Filter the data to include only the top 20 species
+filtered_data <- Candida_data_selected %>%
+  filter(Species %in% top_species)
+
+# Pivot the data to long format
+long_data <- pivot_longer(
+  filtered_data, 
+  cols = -Species,  # Keep the Species column as the identifier
+  names_to = "SugarType", 
+  values_to = "Measurement"
+)
+# Create the heatmap
+heatmap <- ggplot(long_data, aes(x = SugarType, y = reorder(Species, desc(Species)), fill = Measurement)) +
+  geom_tile() +  # Creates the heatmap tiles
+  scale_fill_gradient(
+    low = "pink", 
+    high = "red", 
+    limits = c(0, 7), 
+    breaks = seq(0, 7, by = 1),
+    guide = guide_colourbar(
+      barheight = unit(10, "cm"), # Customize the height of the color bar
+      barwidth = unit(1, "cm"),  # Customize the width of the color bar
+      title.position = "top",
+      title.hjust = 0.5,
+      label.position = "right", # Correct label position for vertical direction
+      label.hjust = 0.5
+    )
+  ) +
+  labs(title = "Heatmap of Sugar Measurements by Species (Top 20)",
+       x = "Type of Sugar", 
+       y = "Species") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1),  # Rotate x-axis labels for readability
+        axis.text.y = element_text(angle = 0, hjust = 1),  # Ensure y-axis labels are readable
+        legend.position = "right",
+        legend.title = element_text(size = 10),
+        legend.text = element_text(size = 8))
+
+# Print the heatmap
+print(heatmap)
+
+
+```
+
+<span style="color:rgb(255, 20, 147);">Pretty cool right? Based on these results we see that relatively the same amount of sugar is taken up by each species but it appears that **Mannose and Fluctose** tend to be the favorite if they got to choose
+
+# Top 100 Analysis
+
+<span style="color:rgb(255, 20, 147);">Now lets expand this a bit and look at 100 different species on a **heatmap**. We still see this commonality of the yeast liking Fructose and Mannose the most
+
+```{r echo=FALSE, fig.height=30, fig.width=20, warning=FALSE, results='hide'}
+# Assuming Candida_data_selected is already loaded
+# Identify the top 100 unique species
+top_species <- unique(Candida_data_selected$Species)[1:100]
+
+# Filter the data to include only the top 100 species
+filtered_data <- Candida_data_selected %>%
+  filter(Species %in% top_species)
+
+# Pivot the data to long format
+long_data <- pivot_longer(
+  filtered_data, 
+  cols = -Species,  # Keep the Species column as the identifier
+  names_to = "SugarType", 
+  values_to = "Measurement"
+)
+# Create the heatmap with adjusted settings for a taller display
+# Load necessary libraries
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+
+# Assuming long_data is ready and contains your heatmap data
+# Adjust the heatmap settings for a taller display
+# Assuming the necessary libraries and data have been loaded
+heatmap <- ggplot(long_data, aes(x = SugarType, y = reorder(Species, desc(Species)), fill = Measurement)) +
+  geom_tile() +  # Creates the heatmap tiles
+  scale_fill_gradient(
+    low = "darkred", 
+    high = "pink", 
+    limits = c(0, 7), 
+    breaks = seq(0, 7, by = 1),
+    guide = guide_colourbar(
+      barheight = unit(10, "cm"), # Customize the height of the color bar
+      barwidth = unit(1, "cm"),  # Customize the width of the color bar
+      title.position = "top",
+      title.hjust = 0.5,
+      label.position = "right", # Correct label position for vertical direction
+      label.hjust = 0.5
+    )
+  ) +
+  labs(title = "Heatmap of Sugar Measurements by Top 100 Species",
+       x = "Type of Sugar", 
+       y = "Species") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, size = 30),  # Rotate and adjust font size for X-axis labels
+        axis.text.y = element_text(size = 20, angle = 0, vjust = 0.5),  # Smaller font size for Y-axis labels
+        plot.title = element_text(size = 25),
+        axis.title = element_text(size = 20),
+        legend.title = element_text(size = 20),
+        legend.text = element_text(size = 16), # Decreased font size
+        legend.position = "right",
+        plot.margin = unit(c(1, 1, 1, 1), "cm"))
+
+# Save the heatmap with adjusted legend settings
+ggsave("tall_heatmap.png", plot = heatmap, width = 10, height = 50, units = "in", dpi = 300, limitsize = FALSE)
+
+print(heatmap)
+
+
+```
+
+
+<span style="color:rgb(255, 20, 147);">Another way to look at this analysis is through the use of a violin plot, showing how much is being taken up by the yeast based on the sugar type
+
+
+```{r echo=FALSE, fig.height=20, fig.width=40, warning=FALSE, results='hide'}
+# Load necessary libraries
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+
+# Assuming Candida_data_selected is already loaded
+# Identify the top 100 unique species
+top_species <- unique(Candida_data_selected$Species)[1:100]
+
+# Filter the data to include only the top 100 species
+filtered_data <- Candida_data_selected %>%
+  filter(Species %in% top_species)
+
+# Pivot the data to long format
+long_data <- pivot_longer(
+  filtered_data, 
+  cols = -Species,  # Keep the Species column as the identifier
+  names_to = "SugarType", 
+  values_to = "Measurement"
+)
+
+# Create the violin plot with increased width for each violin
+violin_plot <- ggplot(long_data, aes(x = SugarType, y = Measurement, fill = SugarType)) +
+  geom_violin(trim = TRUE, adjust = 1, width = 1) + ylim(0, 2) +  # Adjust violin width
+  labs(title = "Violin Plot of Sugar Measurements by Top 100 Species",
+       x = "Type of Sugar",
+       y = "Measurement") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size = 40),  # Adjust the size and angle of x-axis labels
+        axis.text.y = element_text(size = 40),  # Increase the size of y-axis labels
+        plot.title = element_text(size = 40),
+        axis.title = element_text(size = 30),
+        legend.title = element_text(size = 30),
+        legend.text = element_text(size = 25),  # Adjusted font size
+        legend.position = "right",
+        plot.margin = unit(c(1, 1, 1, 1), "cm"))
+
+# Save the violin plot with increased width and readability
+ggsave("violin_plot_adjusted_wide.png", plot = violin_plot, width = 40, height = 20, units = "in", dpi = 300, limitsize = FALSE)
+
+# Print the violin plot
+print(violin_plot)
+
+
+
+```
+
+
+# The Most Pathogenic Yeast
+
+
+<span style="color:rgb(255, 20, 147);">Now lets look at the top dogs, that have been known for being the most pathogenic yeast in the worlds, those these isn't a lot, this many is still concerting.
+
+```{r echo=FALSE, warning=FALSE, results='hide'}
+setwd("C:/Users/Jmons/OneDrive/Documents/R-Class work/MyCharts")
+getwd()
+
+
+# Load necessary library
+library(readr)
+
+# Read the data from the CSV file
+data <- read_csv("C:/Users/Jmons/OneDrive/Documents/R-Class work/MyCharts/data/NormGR_OnlySugars.csv")
+# Define the vector of species names
+species_to_include <- c("pichia kudriavzevii", "Meyerozyma guilliermondii", 
+                        "Candida parapsilosis", "Candida orthopsilosis", 
+                        "Candida dubliniensis", "Candida albicans", 
+                        "Candida tropicalis", "Clavispora lusitaniae", 
+                        "Candida auris", "Nakaseomyces delphensis", 
+                        "Candida metapsilosis")
+
+# Filter the data to include only these species
+ToxicYeast_data <- data[data$Species %in% species_to_include, ]
+
+# Remove columns by index
+ToxicYeast_data <- ToxicYeast_data[ , -c(1, 3, 4, 5, 6, 7)]
+
+# Inspect the first few rows of the modified data
+head(ToxicYeast_data)
+
+
+View(ToxicYeast_data)
+
+```
+```{r echo=FALSE, warning=FALSE, results='hide'}
+library(ggplot2)
+library(tidyr)  # For pivoting data if necessary
+library(dplyr)
+# Example of pivoting, adjust column names as needed
+long_data <- ToxicYeast_data %>%
+  pivot_longer(
+    cols = -Species,  # Exclude the Species column from pivoting
+    names_to = "Sugar",
+    values_to = "Measurement"
+  )
+# Creating a bar plot with ggplot2
+# Creating a bar plot with ggplot2, with adjusted bar width
+ggplot(long_data, aes(x = Sugar, y = Measurement, fill = Species)) +
+  geom_bar(stat = "summary", fun = "mean", position = position_dodge(width = 0.8), width = 0.9) +  # Increased width parameter
+  theme_minimal() +
+  labs(title = "Average Sugar Measurements by Species",
+       x = "Type of Sugar",
+       y = "Average Measurement") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  # Rotate x-axis labels for better readability
+# Save the updated plot with sufficient dimensions to accommodate wider bars
+ggsave("sugar_measurements_plot.png", plot = last_plot(), width = 12, height = 8, units = "in")
+
+
+```
+<span style="color:rgb(255, 20, 147);">This is just one way of looking at how these yeast enjoy certain sugars over the other
+
+<span style="color:rgb(255, 20, 147);">Another way to look at this is through the use of a **bee swarm map**, giving a better visual of each value. 
+
+```{r echo=FALSE, warning=FALSE, results='hide'}
+# Install ggbeeswarm package if it's not already installed
+if (!requireNamespace("ggbeeswarm", quietly = TRUE)) {
+  install.packages("ggbeeswarm")
+}
+
+# Install the tidyverse package if not already installed
+if (!requireNamespace("tidyverse", quietly = TRUE)) {
+  install.packages("tidyverse")
+}
+
+# Load necessary libraries
+library(readr)
+library(tidyr)
+library(ggplot2)
+library(ggbeeswarm)
+
+# Pivot the data to long format where each row is a single measurement for a type of sugar
+ToxicYeast_data_long <- pivot_longer(ToxicYeast_data,
+                                    cols = -Species,  # Exclude the species column from pivoting
+                                    names_to = "SugarType",  # This will hold the names of the sugar columns
+                                    values_to = "Measurements"  # This will hold the measurement values
+                                    )
+
+# Create the bee swarm plot
+ggplot(ToxicYeast_data_long, aes(x = Species, y = Measurements, color = SugarType)) +
+  geom_beeswarm() +
+  theme_minimal() +
+  labs(title = "Bee Swarm Plot of Measurements by Species",
+       x = "Species",
+       y = "Measurements",
+       color = "Type of Sugar") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) # Improve x-axis label readability
+
+
+```

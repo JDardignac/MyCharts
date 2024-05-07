@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "About Me"
 output:
   workflowr::wflow_html:
     toc: false
@@ -7,12 +7,10 @@ editor_options:
   chunk_output_type: console
 ---
 
-## Hello there thanks for stopping by my website. How about you learn a little about me!
+# Hello there thanks for stopping by my website. How about you learn a little about me!
 
 
-My name is Jessica Dardignac and I am from a small town in New Jersey. I was raised by my parents along side my two older brother and my lovely dog Benji! I got my Bachlours in Biology at Fairleigh Dickenson University. Now I am pursuing my Masters in Science at Villanova Univeristy. 
-
-![Historical ecosystems map.](images/bps.jpg){style="float:right; margin-left: 5%; fig-align:right; width:25%;" fig-alt="\"Historical ecosystems map of a large region in the western United States."}
+<span style="color:rgb(255, 20, 147);">My name is Jessica Dardignac and I am from a small town in New Jersey. I was raised by my parents along side my two older brother and my lovely dog Benji! I got my Bachlours in Biology at Fairleigh Dickenson University. Now I am pursuing my Masters in Science at Villanova Univeristy. 
 
 ```{r echo=FALSE}
 # Load required packages
@@ -47,7 +45,7 @@ grid::grid.raster(img)
 ```
 
 
-## Some fun facts about me
+# Some fun facts about me
 
 I geek out on video games and anime
 

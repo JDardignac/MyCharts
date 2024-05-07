@@ -15,20 +15,12 @@
 
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/journal.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link href="site_libs/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-5.3.1/bootstrap.bundle.min.js"></script>
+<script src="site_libs/bs3compat-0.6.1/transition.js"></script>
+<script src="site_libs/bs3compat-0.6.1/tabs.js"></script>
+<script src="site_libs/bs3compat-0.6.1/bs3compat.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -313,11 +305,11 @@ aria-hidden="true"></span> </a>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2024-03-18
+<strong>Last updated:</strong> 2024-05-07
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 1
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span> 1
 </p>
@@ -363,15 +355,99 @@ HTML.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomJDardignacMyChartstree3c8c9d49c8b59a2147d21d88990de303cf15412ctargetblank3c8c9d4a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+</p>
+</div>
+<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! The global environment was empty. Objects defined in the
+global environment can affect the analysis in your R Markdown file in
+unknown ways. For reproduciblity it’s best to always run the code in an
+empty environment.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20240222code">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Seed:</strong>
+<code>set.seed(20240222)</code> </a>
+</p>
+</div>
+<div id="strongSeedstrongcodesetseed20240222code"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>The command <code>set.seed(20240222)</code> was run prior to running
+the code in the R Markdown file. Setting a seed ensures that any results
+that rely on randomness, e.g. subsampling or permutations, are
+reproducible.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Session information:</strong>
+recorded </a>
+</p>
+</div>
+<div id="strongSessioninformationstrongrecorded"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Recording the operating system, R version, and package
+versions is critical for reproducibility.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be
+confident that you successfully produced the results during this
+run.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+</p>
+</div>
+<div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Using relative paths to the files within your workflowr
+project makes it easier to run your code on other machines.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomJDardignacMyChartstreeb9ea0e30142f2d285b1f698f70ca57c81624397dtargetblankb9ea0e3a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/JDardignac/MyCharts/tree/3c8c9d49c8b59a2147d21d88990de303cf15412c" target="_blank">3c8c9d4</a>
+<a href="https://github.com/JDardignac/MyCharts/tree/b9ea0e30142f2d285b1f698f70ca57c81624397d" target="_blank">b9ea0e3</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomJDardignacMyChartstree3c8c9d49c8b59a2147d21d88990de303cf15412ctargetblank3c8c9d4a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomJDardignacMyChartstreeb9ea0e30142f2d285b1f698f70ca57c81624397dtargetblankb9ea0e3a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -381,7 +457,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/JDardignac/MyCharts/tree/3c8c9d49c8b59a2147d21d88990de303cf15412c" target="_blank">3c8c9d4</a>.
+<a href="https://github.com/JDardignac/MyCharts/tree/b9ea0e30142f2d285b1f698f70ca57c81624397d" target="_blank">b9ea0e3</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -400,9 +476,31 @@ Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
 
+Untracked files:
+    Untracked:  analysis/all_species_violin_plot.png
+    Untracked:  analysis/heatmap.png
+    Untracked:  analysis/heatmap_large.png
+    Untracked:  analysis/heatmap_tall.png
+    Untracked:  analysis/sugar_measurements_plot.png
+    Untracked:  analysis/tall_heatmap.png
+    Untracked:  analysis/violin_plot.png
+    Untracked:  analysis/violin_plot_adjusted.png
+    Untracked:  analysis/violin_plot_adjusted_wide.png
+    Untracked:  data/NormGR_OnlySugars.csv
+    Untracked:  data/Shorted_C_NormGR_OnlySugars.csv
+    Untracked:  heatmap.png
+    Untracked:  heatmap_large.png
+    Untracked:  heatmap_tall.png
+    Untracked:  sugar_measurements_plot.png
+    Untracked:  tall_heatmap.png
+    Untracked:  violin_plot_adjusted_wide.png
+
 Unstaged changes:
+    Modified:   analysis/_site.yml
     Modified:   analysis/about.Rmd
+    Modified:   analysis/first_analysis_trial.Rmd
     Modified:   analysis/index.Rmd
+    Modified:   analysis/license.Rmd
 
 </code></pre>
 <p>
@@ -447,6 +545,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/JDardignac/MyCharts/blob/b9ea0e30142f2d285b1f698f70ca57c81624397d/analysis/index.Rmd" target="_blank">b9ea0e3</a>
+</td>
+<td>
+JDardignac
+</td>
+<td>
+2024-03-18
+</td>
+<td>
+update to website
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/JDardignac/MyCharts/b9ea0e30142f2d285b1f698f70ca57c81624397d/docs/index.html" target="_blank">b9ea0e3</a>
+</td>
+<td>
+JDardignac
+</td>
+<td>
+2024-03-18
+</td>
+<td>
+update to website
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -556,41 +688,60 @@ Add files via upload
 </div>
 </div>
 </div>
-<p>Welcome to my research website.</p>
-<div id="background" class="section level2">
-<h2>Background</h2>
-<p>Sceloporus Scaleo- mean leg porus- means hole femoral pores= leg
-holes * found in the thighs of the legs, typically for males to secret
-waxy pheromone for marking territory and signaling to females</p>
-<p>Undulatus refers to undulating waves wave like pattern skin,
-typically seeing on younger ones and on females</p>
-<p>The Sceloporus undulatus also known as the Eastern fence lizard,
-though refered to as this name, lives is a vast area of lands going
-toward the northern coast and even southerns areas (very ubiquitous).
-Fence lizard is a very good part of its name because it loves being
-perched on fences and tree branches, this way it can bask in the sun.
-Some other names it can be addressed as is Pine Lizard (can be found in
-pine areas), swift lizard (can move very fast), or a combo of the two
-the pine swift lizard. Who would of known this lizard was also a Taylor
-Swift fan!</p>
-<p>To beadle to tell them apart from other lizards in the area, they
-clearly have spiny appearance. They have small keel like protrusions
-that help establish the texture. Other lizards may appear smooth and
-shiny. Males also have a blue throat and some blue on the sides of their
-belly. They show this color when establishing their territories or
-trying to attract females (head bobbing flashing the blue to the
-females). This can unfortunately attract predators as well with seeing
-the blue and pointing them out where they are perched</p>
-<p>This type of lizard is diurnal meaning active during the day and hide
-at night. They also like dryer areas compared to the moist area. during
-the day when they are active they like to perch and bask in the sun to
-help regulate their body temperature, hormones, circadian rhythms and
-ultimately their life cycle.</p>
-<p>Since fence lizards are very terretorial, they tend to come back to
-the same area everyday. Their diet consit of many likes like spiders,
-centipedes, millipedes</p>
-<p>Click on this <a href="first-analysis.html">link</a> to see my
-results.</p>
+<p>Welcome to my Research Website.</p>
+<p><span style="color:rgb(255, 20, 147);">Do you wanna know more about
+Yeast? How about pathogenic Yeast? If that answer is yes, check out some
+really cool results of testing them against sugars!</p>
+<p><span style="color:rgb(255, 20, 147);"><strong>Check out my First
+Analysis page for all things Sugars vs Yeast!</strong></p>
+<p><a
+href="https://en.wikipedia.org/wiki/Yeast#:~:text=Pathogenic%20yeasts,-Main%20article%3A%20Fungal&amp;text=Some%20species%20of%20yeast%20are,significant%20pathogens%20of%20immunocompromised%20people.">Learn
+about Pathogenic Yeasts</a></p>
+<p><img src="figure/index.Rmd/unnamed-chunk-1-1.png" width="672" style="display: block; margin: auto;" /></p>
+<br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+Session information
+</button>
+</p>
+<div id="workflowr-sessioninfo" class="collapse">
+<pre class="r"><code>sessionInfo()</code></pre>
+<pre><code>R version 4.3.2 (2023-10-31 ucrt)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 11 x64 (build 22631)
+
+Matrix products: default
+
+
+locale:
+[1] LC_COLLATE=English_United States.utf8 
+[2] LC_CTYPE=English_United States.utf8   
+[3] LC_MONETARY=English_United States.utf8
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.utf8    
+
+time zone: America/New_York
+tzcode source: internal
+
+attached base packages:
+[1] grid      stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+
+other attached packages:
+[1] jpeg_0.1-10
+
+loaded via a namespace (and not attached):
+ [1] vctrs_0.6.5       cli_3.6.2         knitr_1.45        rlang_1.1.3      
+ [5] xfun_0.41         highr_0.10        stringi_1.8.3     promises_1.2.1   
+ [9] jsonlite_1.8.8    workflowr_1.7.1   glue_1.7.0        rprojroot_2.0.4  
+[13] git2r_0.33.0      htmltools_0.5.7   httpuv_1.6.14     sass_0.4.8       
+[17] fansi_1.0.6       rmarkdown_2.25    jquerylib_0.1.4   evaluate_0.23    
+[21] tibble_3.2.1      fastmap_1.1.1     yaml_2.3.8        lifecycle_1.0.4  
+[25] whisker_0.4.1     stringr_1.5.1     compiler_4.3.2    fs_1.6.3         
+[29] Rcpp_1.0.12       pkgconfig_2.0.3   rstudioapi_0.15.0 later_1.3.2      
+[33] digest_0.6.34     R6_2.5.1          utf8_1.2.4        pillar_1.9.0     
+[37] magrittr_2.0.3    bslib_0.6.1       tools_4.3.2       cachem_1.0.8     </code></pre>
 </div>
 
 

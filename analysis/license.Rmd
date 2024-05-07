@@ -7,6 +7,9 @@ editor_options:
   chunk_output_type: console
 ---
 
+<span style="color:red;">All information on this website belongs to the creating party and no one else</span>
+
+
 What license are you using for your code? See [choosealicense.com][choose] for
 help deciding. It's a convention to save a file `LICENSE` in the root of your
 Git repo that contains the license text.

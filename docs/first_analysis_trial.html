@@ -16,20 +16,12 @@
 
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link href="site_libs/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-5.3.1/bootstrap.bundle.min.js"></script>
+<script src="site_libs/bs3compat-0.6.1/transition.js"></script>
+<script src="site_libs/bs3compat-0.6.1/tabs.js"></script>
+<script src="site_libs/bs3compat-0.6.1/bs3compat.js"></script>
 <script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
@@ -391,13 +383,13 @@ aria-hidden="true"></span> </a>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2024-03-13
+<strong>Last updated:</strong> 2024-05-07
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 5
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 1
+aria-hidden="true"></span> 2
 </p>
 <p>
 <strong>Knit directory:</strong> <code>MyCharts/</code> <span
@@ -510,30 +502,74 @@ run.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongabsolute">
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> <strong>File paths:</strong> absolute </a>
 </p>
 </div>
-<div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
+<div id="strongFilepathsstrongabsolute" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great job! Using relative paths to the files within your workflowr
-project makes it easier to run your code on other machines.</p>
+<p>
+Using absolute paths to the files within your workflowr project makes it
+difficult for you and others to run your code on a different machine.
+Change the absolute path(s) below to the suggested relative path(s) to
+make your code more reproducible.
+</p>
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th style="text-align:left;">
+absolute
+</th>
+<th style="text-align:left;">
+relative
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+C:/Users/Jmons/OneDrive/Documents/R-Class work/MyCharts
+</td>
+<td style="text-align:left;">
+.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+C:/Users/Jmons/OneDrive/Documents/R-Class
+work/MyCharts/data/Shorted_C_NormGR_OnlySugars.csv
+</td>
+<td style="text-align:left;">
+data/Shorted_C_NormGR_OnlySugars.csv
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+C:/Users/Jmons/OneDrive/Documents/R-Class
+work/MyCharts/data/NormGR_OnlySugars.csv
+</td>
+<td style="text-align:left;">
+data/NormGR_OnlySugars.csv
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomJDardignacMyChartstree96fc87a1268fe90a5d4f1839e29a1eed070c9118targetblank96fc87aa">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomJDardignacMyChartstreeb9ea0e30142f2d285b1f698f70ca57c81624397dtargetblankb9ea0e3a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/JDardignac/MyCharts/tree/96fc87a1268fe90a5d4f1839e29a1eed070c9118" target="_blank">96fc87a</a>
+<a href="https://github.com/JDardignac/MyCharts/tree/b9ea0e30142f2d285b1f698f70ca57c81624397d" target="_blank">b9ea0e3</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomJDardignacMyChartstree96fc87a1268fe90a5d4f1839e29a1eed070c9118targetblank96fc87aa"
+id="strongRepositoryversionstrongahrefhttpsgithubcomJDardignacMyChartstreeb9ea0e30142f2d285b1f698f70ca57c81624397dtargetblankb9ea0e3a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -543,7 +579,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/JDardignac/MyCharts/tree/96fc87a1268fe90a5d4f1839e29a1eed070c9118" target="_blank">96fc87a</a>.
+<a href="https://github.com/JDardignac/MyCharts/tree/b9ea0e30142f2d285b1f698f70ca57c81624397d" target="_blank">b9ea0e3</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -562,9 +598,31 @@ Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
 
+Untracked files:
+    Untracked:  analysis/all_species_violin_plot.png
+    Untracked:  analysis/heatmap.png
+    Untracked:  analysis/heatmap_large.png
+    Untracked:  analysis/heatmap_tall.png
+    Untracked:  analysis/sugar_measurements_plot.png
+    Untracked:  analysis/tall_heatmap.png
+    Untracked:  analysis/violin_plot.png
+    Untracked:  analysis/violin_plot_adjusted.png
+    Untracked:  analysis/violin_plot_adjusted_wide.png
+    Untracked:  data/NormGR_OnlySugars.csv
+    Untracked:  data/Shorted_C_NormGR_OnlySugars.csv
+    Untracked:  heatmap.png
+    Untracked:  heatmap_large.png
+    Untracked:  heatmap_tall.png
+    Untracked:  sugar_measurements_plot.png
+    Untracked:  tall_heatmap.png
+    Untracked:  violin_plot_adjusted_wide.png
+
 Unstaged changes:
     Modified:   analysis/_site.yml
+    Modified:   analysis/about.Rmd
     Modified:   analysis/first_analysis_trial.Rmd
+    Modified:   analysis/index.Rmd
+    Modified:   analysis/license.Rmd
 
 </code></pre>
 <p>
@@ -612,6 +670,40 @@ Message
 <tbody>
 <tr>
 <td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/JDardignac/MyCharts/blob/3c8c9d49c8b59a2147d21d88990de303cf15412c/analysis/first_analysis_trial.Rmd" target="_blank">3c8c9d4</a>
+</td>
+<td>
+JDardignac
+</td>
+<td>
+2024-03-14
+</td>
+<td>
+update to website
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/JDardignac/MyCharts/3c8c9d49c8b59a2147d21d88990de303cf15412c/docs/first_analysis_trial.html" target="_blank">3c8c9d4</a>
+</td>
+<td>
+JDardignac
+</td>
+<td>
+2024-03-14
+</td>
+<td>
+update to website
+</td>
+</tr>
+<tr>
+<td>
 html
 </td>
 <td>
@@ -651,11 +743,101 @@ Add my first analysis
 </div>
 </div>
 </div>
-<p>Click on this <a href="first_analysis_trial.html">link</a> to see my
-results.</p>
-<p>Adding an Image &gt; Load required packages: library(grid)
-library(jpeg)</p>
+<p>This is how I felt completing this website! Anyways lets get into the
+results shall we</p>
 <p><img src="figure/first_analysis_trial.Rmd/unnamed-chunk-1-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-1-1">
+Past versions of unnamed-chunk-1-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-1-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/JDardignac/MyCharts/blob/3c8c9d49c8b59a2147d21d88990de303cf15412c/docs/figure/first_analysis_trial.Rmd/unnamed-chunk-1-1.png" target="_blank">3c8c9d4</a>
+</td>
+<td>
+JDardignac
+</td>
+<td>
+2024-03-14
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="the-top-20" class="section level1">
+<h1>The Top 20</h1>
+<p><span style="color:rgb(255, 20, 147);"> There are so many Species of
+the genus Candida so just for fun, before we look at the truly
+pathogenic ones lets see how about 20 of them reacted in growing in
+different sugars</p>
+<p><span style="color:rgb(255, 20, 147);"> <strong>Here is a heat map
+looking at how much of the sugars were used based on each
+species</strong></p>
+<pre><code>
+Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>The following objects are masked from &#39;package:stats&#39;:
+
+    filter, lag</code></pre>
+<pre><code>The following objects are masked from &#39;package:base&#39;:
+
+    intersect, setdiff, setequal, union</code></pre>
+<p><img src="figure/first_analysis_trial.Rmd/unnamed-chunk-4-1.png" width="768" style="display: block; margin: auto;" /></p>
+<p><span style="color:rgb(255, 20, 147);">Pretty cool right? Based on
+these results we see that relatively the same amount of sugar is taken
+up by each species but it appears that <strong>Mannose and
+Fluctose</strong> tend to be the favorite if they got to choose</p>
+</div>
+<div id="top-100-analysis" class="section level1">
+<h1>Top 100 Analysis</h1>
+<p><span style="color:rgb(255, 20, 147);">Now lets expand this a bit and
+look at 100 different species on a <strong>heatmap</strong>. We still
+see this commonality of the yeast liking Fructose and Mannose the
+most</p>
+<p><img src="figure/first_analysis_trial.Rmd/unnamed-chunk-5-1.png" width="1920" style="display: block; margin: auto;" /></p>
+<p><span style="color:rgb(255, 20, 147);">Another way to look at this
+analysis is through the use of a violin plot, showing how much is being
+taken up by the yeast based on the sugar type</p>
+<p><img src="figure/first_analysis_trial.Rmd/unnamed-chunk-6-1.png" width="3840" style="display: block; margin: auto;" /></p>
+</div>
+<div id="the-most-pathogenic-yeast" class="section level1">
+<h1>The Most Pathogenic Yeast</h1>
+<p><span style="color:rgb(255, 20, 147);">Now lets look at the top dogs,
+that have been known for being the most pathogenic yeast in the worlds,
+those these isn’t a lot, this many is still concerting.</p>
+<pre><code>Rows: 1124 Columns: 24
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+chr  (6): Species, Genus, NRRL, CBS, Other, Hittinger
+dbl (18): PU, Cellobiose, Citrate, D-Glucosamine, Fructose, Galactose, Glyce...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<p><img src="figure/first_analysis_trial.Rmd/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" />
+<span style="color:rgb(255, 20, 147);">This is just one way of looking
+at how these yeast enjoy certain sugars over the other</p>
+<p><span style="color:rgb(255, 20, 147);">Another way to look at this is
+through the use of a <strong>bee swarm map</strong>, giving a better
+visual of each value.</p>
+<p><img src="figure/first_analysis_trial.Rmd/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto;" /></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -687,19 +869,27 @@ attached base packages:
 [8] base     
 
 other attached packages:
-[1] jpeg_0.1-10
+[1] ggbeeswarm_0.7.2 ggplot2_3.5.0    tidyr_1.3.1      dplyr_1.1.4     
+[5] readr_2.1.5      jpeg_0.1-10     
 
 loaded via a namespace (and not attached):
- [1] vctrs_0.6.5       cli_3.6.2         knitr_1.45        rlang_1.1.3      
- [5] xfun_0.41         highr_0.10        stringi_1.8.3     promises_1.2.1   
- [9] jsonlite_1.8.8    workflowr_1.7.1   glue_1.7.0        rprojroot_2.0.4  
-[13] git2r_0.33.0      htmltools_0.5.7   httpuv_1.6.14     sass_0.4.8       
-[17] fansi_1.0.6       rmarkdown_2.25    jquerylib_0.1.4   evaluate_0.23    
-[21] tibble_3.2.1      fastmap_1.1.1     yaml_2.3.8        lifecycle_1.0.4  
-[25] whisker_0.4.1     stringr_1.5.1     compiler_4.3.2    fs_1.6.3         
-[29] Rcpp_1.0.12       pkgconfig_2.0.3   rstudioapi_0.15.0 later_1.3.2      
-[33] digest_0.6.34     R6_2.5.1          utf8_1.2.4        pillar_1.9.0     
-[37] magrittr_2.0.3    bslib_0.6.1       tools_4.3.2       cachem_1.0.8     </code></pre>
+ [1] sass_0.4.8        utf8_1.2.4        generics_0.1.3    stringi_1.8.3    
+ [5] hms_1.1.3         digest_0.6.34     magrittr_2.0.3    evaluate_0.23    
+ [9] fastmap_1.1.1     rprojroot_2.0.4   workflowr_1.7.1   jsonlite_1.8.8   
+[13] tidyverse_2.0.0   whisker_0.4.1     promises_1.2.1    purrr_1.0.2      
+[17] fansi_1.0.6       scales_1.3.0      textshaping_0.3.7 jquerylib_0.1.4  
+[21] cli_3.6.2         crayon_1.5.2      rlang_1.1.3       bit64_4.0.5      
+[25] munsell_0.5.0     withr_3.0.0       cachem_1.0.8      yaml_2.3.8       
+[29] parallel_4.3.2    tools_4.3.2       tzdb_0.4.0        colorspace_2.1-0 
+[33] httpuv_1.6.14     vctrs_0.6.5       R6_2.5.1          lifecycle_1.0.4  
+[37] git2r_0.33.0      stringr_1.5.1     bit_4.0.5         fs_1.6.3         
+[41] vipor_0.4.7       vroom_1.6.5       ragg_1.2.7        beeswarm_0.4.0   
+[45] pkgconfig_2.0.3   pillar_1.9.0      bslib_0.6.1       later_1.3.2      
+[49] gtable_0.3.4      glue_1.7.0        Rcpp_1.0.12       systemfonts_1.0.5
+[53] xfun_0.41         tibble_3.2.1      tidyselect_1.2.0  highr_0.10       
+[57] rstudioapi_0.15.0 knitr_1.45        farver_2.1.1      htmltools_0.5.7  
+[61] labeling_0.4.3    rmarkdown_2.25    compiler_4.3.2   </code></pre>
+</div>
 </div>
 
 

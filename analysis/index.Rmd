@@ -8,25 +8,27 @@ editor_options:
   chunk_output_type: console
 ---
 
-Welcome to my research website.
+Welcome to my Research Website.
 
-## Background
-Sceloporus
-Scaleo- mean leg
-porus- means hole
-femoral pores= leg holes
-*   found in the thighs of the legs, typically for males to secret waxy pheromone for marking territory and signaling to females
+<span style="color:rgb(255, 20, 147);">Do you wanna know more about Yeast? How about pathogenic Yeast? If that answer is yes, check out some really cool results of testing them against sugars!
 
-Undulatus
-refers to undulating waves
-wave like pattern skin, typically seeing on younger ones and on females
+<span style="color:rgb(255, 20, 147);">**Check out my First Analysis page for all things Sugars vs Yeast!**
 
-The Sceloporus undulatus also known as the Eastern fence lizard, though refered to as this name, lives is a vast area of lands going toward the northern coast and even southerns areas (very ubiquitous). Fence lizard is a very good part of its name because it loves being perched on fences and tree branches, this way it can bask in the sun. Some other names it can be addressed as is Pine Lizard (can be found in pine areas), swift lizard (can move very fast), or a combo of the two the pine swift lizard. Who would of known this lizard was also a Taylor Swift fan!
+[Learn about Pathogenic Yeasts](https://en.wikipedia.org/wiki/Yeast#:~:text=Pathogenic%20yeasts,-Main%20article%3A%20Fungal&text=Some%20species%20of%20yeast%20are,significant%20pathogens%20of%20immunocompromised%20people.)
 
-To beadle to tell them apart from other lizards in the area, they clearly have spiny appearance. They have small keel like protrusions that help establish the texture. Other lizards may appear smooth and shiny. Males also have a blue throat and some blue on the sides of their belly. They show this color when establishing their territories or trying to attract females (head bobbing flashing the blue to the females). This can unfortunately attract predators as well with seeing the blue and pointing them out where they are perched
 
-This type of lizard is diurnal meaning active during the day and hide at night. They also like dryer areas compared to the moist area. during the day when they are active they like to perch and bask in the sun to help regulate their body temperature, hormones, circadian rhythms and ultimately their life cycle. 
+```{r echo=FALSE}
+# Load required packages
+library(grid)
 
-Since fence lizards are very terretorial, they tend to come back to the same area everyday. Their diet consit of many likes like spiders, centipedes, millipedes
+# Set the working directory to where your image is located
+setwd("C://Users//Jmons//OneDrive//Documents//R-Class work//Photos")
 
-Click on this [link](first-analysis.html) to see my results.
+library(jpeg)
+
+# Read the image file
+img <- readJPEG("BabyYeast.jpg") # You can also use readJPEG() for JPEG files or readTIFF() for TIFF files
+
+# Display the image
+grid::grid.raster(img)
+```
